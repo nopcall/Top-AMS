@@ -37,18 +37,18 @@ jobs:
               0x10000 build/Top-AMS.bin \
               0x8000 build/partition_table/partition-table.bin
 
-      - name: esp32s3
-        uses: espressif/esp-idf-ci-action@v1
-        with:
-          esp_idf_version: release-v6.0
-          target: esp32s3
-          command: |
-            idf.py build && \
-            python -m esptool --chip esp32s3 merge_bin -o Top-AMS-esp32s3.bin \
-              --flash_mode dio --flash_freq 80m --flash_size 16MB \
-              0x0 build/bootloader/bootloader.bin \
-              0x10000 build/Top-AMS.bin \
-              0x8000 build/partition_table/partition-table.bin
+      # - name: esp32s3
+      #   uses: espressif/esp-idf-ci-action@v1
+      #   with:
+      #     esp_idf_version: release-v6.0
+      #     target: esp32s3
+      #     command: |
+      #       idf.py build && \
+      #       python -m esptool --chip esp32s3 merge_bin -o Top-AMS-esp32s3.bin \
+      #         --flash_mode dio --flash_freq 80m --flash_size 16MB \
+      #         0x0 build/bootloader/bootloader.bin \
+      #         0x10000 build/Top-AMS.bin \
+      #         0x8000 build/partition_table/partition-table.bin
 
       # 上传产物 artifacts
       - name: upload build artifacts
