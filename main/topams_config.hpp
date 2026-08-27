@@ -43,14 +43,22 @@ namespace topams {
             {2, GPIO_NUM_10, GPIO_NUM_6},//2
             {3, GPIO_NUM_5, GPIO_NUM_4},//3
             {4, GPIO_NUM_8, GPIO_NUM_9},//4
-            {5, GPIO_NUM_0, GPIO_NUM_1},//5
-            {6, GPIO_NUM_20, GPIO_NUM_21},//6
-            {7, GPIO_NUM_12, GPIO_NUM_13},//7
-            {8, GPIO_NUM_18, GPIO_NUM_19},//8
+                                        //
+            // {5, GPIO_NUM_0, GPIO_NUM_1},//5
+            // {6, GPIO_NUM_20, GPIO_NUM_21},//6
+            // {7, GPIO_NUM_12, GPIO_NUM_13},//7
+            // {8, GPIO_NUM_18, GPIO_NUM_19},//8
+                                          //
+            {5, GPIO_NUM_NC, GPIO_NUM_NC},//5
+            {6, GPIO_NUM_NC, GPIO_NUM_NC},//6
+            {7, GPIO_NUM_NC, GPIO_NUM_NC},//7
+            {8, GPIO_NUM_NC, GPIO_NUM_NC},//8
+                                          //
             {9, GPIO_NUM_NC, GPIO_NUM_NC},//9
             {10, GPIO_NUM_NC, GPIO_NUM_NC},//10
             {11, GPIO_NUM_NC, GPIO_NUM_NC},//11
             {12, GPIO_NUM_NC, GPIO_NUM_NC},//12
+                                           //
             {13, GPIO_NUM_NC, GPIO_NUM_NC},//13
             {14, GPIO_NUM_NC, GPIO_NUM_NC},//14
             {15, GPIO_NUM_NC, GPIO_NUM_NC},//15
@@ -59,7 +67,7 @@ namespace topams {
     //16通道的情况下使用地址
 
     //进料微动
-    inline gpio_num_t forward_click = GPIO_NUM_7;
+    inline gpio_num_t forward_click = GPIO_NUM_12;
 
     struct mqtt_config {
         inline static mesp::ws_nvs_value<Exstring<16>> bambu_ip{"bambu_ip", ""};
